@@ -5,10 +5,7 @@ jobs:
   execute:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: npm install
-      - run: npm run build
-      - uses: ./
+      - uses: jpmcb/prow-github-actions@v1
         with:
           jobs: lgtm
           github-token: '${{ secrets.GITHUB_TOKEN }}'
